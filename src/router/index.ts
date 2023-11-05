@@ -1,5 +1,6 @@
-import { CourseDetails } from './types'
+import type { CourseDetails } from './types'
 import pages from './pages'
+import { readonly, type DeepReadonly } from 'vue'
 
 type PageNames = keyof typeof pages
 
@@ -19,8 +20,10 @@ function navigate<T extends PageNames>(
   page: T,
   params?: ObjectType<T>,
 ): Promise<any> {
-  if (navigateLock) return
-  const eventName = Math.floor(Math.random() * 1000) + new Date().getTime() // 生成唯一事件名
+  if (navigateLock) return new Promise<any>(
+    (resolve, reject) => {}
+  )
+  const eventName = Math.floor(Math.random() * 1000) + new Date().getTime() + '' // 生成唯一事件名
   navigateLock = true
   routeStore[page] = params
   uni.navigateTo({
@@ -60,7 +63,7 @@ interface BackParams {
 }
 
 function back({ delta, data }: BackParams = { delta: 1, data: null }) {
-  const currentRoute = getCurrentPages().pop()
+  const currentRoute:any = getCurrentPages().pop() 
   const eventName = currentRoute.options.eventName
   uni.$emit(eventName, data)
   uni.navigateBack({

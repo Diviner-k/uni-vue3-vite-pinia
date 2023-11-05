@@ -23,6 +23,12 @@
 			"style": {
 				"navigationBarTitleText": "个人中心"
 			}
+		},
+		{
+			"path": "pages/petDetails/index",
+			"style": {
+				"navigationBarTitleText": "宠物详情"
+			}
 		}
 	],
 	"tabBar": {

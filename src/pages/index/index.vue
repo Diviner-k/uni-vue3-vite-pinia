@@ -3,6 +3,7 @@
     <!-- 搜索 -->
     <uni-search-bar @confirm="search" :focus="true" v-model="searchValue" bgColor="#fff" @blur="blur" @focus="focus"
       @input="input" @cancel="cancel" @clear="clear">
+      <uni-icons slot="searchIcon" color="#999999" size="18" type="home" />
     </uni-search-bar>
     <!-- banner -->
     <MySwiper></MySwiper>
@@ -52,6 +53,7 @@ import { onMounted, ref, watch } from 'vue'
 import MySwiper from '@/pages/components/MySwiper.vue'
 import { getCurrentInstance } from 'vue';
 import { onPageScroll } from '@dcloudio/uni-app';
+import router from '@/router/index'
 
 const searchValue = ref<string>('')
 const mainWrapper = ref<any>(null)
@@ -85,7 +87,9 @@ onMounted(() => {
 /**
  * 点击卡片
  */
-const handleClickCard = () => { }
+const handleClickCard = () => {
+  router.navigate("petDetails")
+}
 // 页面滚动
 onPageScroll(e => {
   scrollTop.value = e.scrollTop
