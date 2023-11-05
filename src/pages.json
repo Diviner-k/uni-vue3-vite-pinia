@@ -13,6 +13,12 @@
 			}
 		},
 		{
+			"path": "pages/publishInfo/index",
+			"style": {
+				"navigationBarTitleText": "发布"
+			}
+		},
+		{
 			"path": "pages/user/index",
 			"style": {
 				"navigationBarTitleText": "个人中心"
@@ -24,6 +30,10 @@
 			{
 				"pagePath": "pages/index/index",
 				"text": "首页"
+			},
+			{
+				"pagePath": "pages/publishInfo/index",
+				"text": "发布"
 			},
 			{
 				"pagePath": "pages/user/index",

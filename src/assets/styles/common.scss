@@ -1,14 +1,16 @@
+
 @import "./vars.scss";
 @import "./mixins.scss";
 
 page {
     box-sizing: border-box;
     font-size: $font-size;
+    background-color: #f8f8f8;
 }
 
 view,
 text {
-    font-size: $font-size;
+    // font-size: $font-size;
     box-sizing: border-box;
     color: #333;
 }
@@ -72,6 +74,9 @@ button::after {
     padding: 20rpx;
 }
 
+.mb20 {
+    margin-bottom: 20rpx;
+}
 .mb32 {
     margin-bottom: 32rpx;
 }
@@ -135,9 +140,13 @@ button::after {
 }
 
 .bg-white {
-    background-color: #fff;
+    background-color: $white-color;
 }
 
 .bg-gray {
     background-color: $bg-gray;
+}
+.primary-btn{
+    background-color: #007aff;
+    color: $white-color;
 }
