@@ -10,8 +10,10 @@
     "types": [
       "@dcloudio/types",
       "@uni-helper/uni-app-types",
-      "@uni-helper/uni-ui-types"
+      "@uni-helper/uni-ui-types",
+      "@types/wechat-miniprogram"
     ]
   },
+
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
